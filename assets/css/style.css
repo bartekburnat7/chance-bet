@@ -15,7 +15,7 @@ nav {
 
 nav>div {
     margin: auto;
-    max-width: 1500px;
+    max-width: 1400px;
     background-color: #404040;
     display: flex;
     justify-content: space-between;
@@ -26,4 +26,64 @@ nav a {
     text-decoration: none;
     color: white;
     background-color: transparent;
+}
+
+#games {
+    margin: auto;
+    max-width: 1400px;
+
+}
+
+#game_container {
+    margin-top: 30px;
+    background-color: #404040;
+    border-radius: 30px;
+    display: grid;
+    /* grid-template-columns: 1fr; */
+}
+
+#mainbox {
+    /* grid-row-start: 1;
+    grid-column-start: 1; */
+    height: 450px;
+    width: 450px;
+    margin: auto;
+    border-radius: 225px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    animation: rotate 5s;
+    animation-fill-mode: forwards;
+}
+
+.box {
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+
+#white {
+    background-color: white;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#green {
+    background-color: green;
+}
+
+#blue {
+    background-color: blue;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(2999deg);
+    }
 }
