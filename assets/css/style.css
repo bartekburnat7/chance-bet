@@ -39,21 +39,79 @@ nav a {
     background-color: #404040;
     border-radius: 30px;
     display: grid;
-    /* grid-template-columns: 1fr; */
+    grid-template-columns: 1fr;
 }
 
 #mainbox {
-    /* grid-row-start: 1;
-    grid-column-start: 1; */
+    grid-row-start: 1;
+    grid-column-start: 1;
     height: 450px;
     width: 450px;
     margin: auto;
-    border-radius: 225px;
+    border-radius: 100%;
     overflow: hidden;
     margin-top: 40px;
     margin-bottom: 40px;
+    border: black 5px solid;
+    transform: rotate(20deg);
+}
+
+#arrow {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    clip-path: polygon(50% 0%, 0% 55%, 100% 55%);
+    margin: auto;
+    height: 70%;
+    width: 20px;
+    box-shadow: 10px 10px 5px 12px lightblue;
+}
+
+.spin_green {
     animation: rotate 5s;
     animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+
+    to {
+        transform: rotate(2999deg);
+    }
+}
+
+.spin_blue {
+    animation: rotate_blue 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate_blue {
+
+    to {
+        transform: rotate(3089deg);
+    }
+}
+
+.spin_orange {
+    animation: rotate_orange 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate_orange {
+
+    to {
+        transform: rotate(3179deg);
+    }
+}
+
+.spin_white {
+    animation: rotate_white 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate_white {
+
+    to {
+        transform: rotate(3269deg);
+    }
 }
 
 .box {
@@ -78,12 +136,40 @@ nav a {
     background-color: blue;
 }
 
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
+/*
+*   BET PLACING BUTTONS     *
+*/
 
-    to {
-        transform: rotate(2999deg);
-    }
+#bet_roulette {
+    margin: 20px 0 0 0;
+}
+
+#bet_size {
+    width: 20%;
+    border: none;
+}
+
+.box_choice {
+    width: 15%;
+}
+
+#place_bet_roulette {
+    width: 20%;
+    border: none;
+}
+
+#white_box_choice {
+    background-color: white;
+}
+
+#orange_box_choice {
+    background-color: orange;
+}
+
+#green_box_choice {
+    background-color: green;
+}
+
+#blue_box_choice {
+    background-color: blue;
 }
