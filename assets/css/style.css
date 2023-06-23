@@ -142,6 +142,9 @@ nav a {
 
 #bet_roulette {
     margin: 20px 0 0 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 #bet_size {
@@ -149,27 +152,27 @@ nav a {
     border: none;
 }
 
-.box_choice {
-    width: 15%;
+.choice {
+    width: 0;
 }
 
 #place_bet_roulette {
     width: 20%;
-    border: none;
+    font-size: 2rem;
 }
 
-#white_box_choice {
+#white_box {
     background-color: white;
 }
 
-#orange_box_choice {
+#orange_box {
     background-color: orange;
 }
 
-#green_box_choice {
+#green_box {
     background-color: green;
 }
 
-#blue_box_choice {
+#blue_box {
     background-color: blue;
 }
