@@ -10,10 +10,12 @@ function place_bet_roulette() {
     element.classList.remove("spin_orange");
     element.classList.remove("spin_white");
 
-    var place_bet_roulette = document.getElementById("number_roulette");
+    var place_bet_roulette = document.getElementById("bet_size").value;
     var current_number = generate_number();
     console.log(current_number);
-    win_loss_calc(even_odd_verify(current_number), selected_color(), place_bet_roulette);
+    var result = win_loss_calc(even_odd_verify(current_number), selected_color(), place_bet_roulette);
+    console.log(result);
+
 }
 
 
@@ -30,6 +32,8 @@ function selected_color() {
         return 1;
     } else if (document.getElementById('blue_box_choice').checked) {
         return 2;
+    } else {
+        return false;
     }
 }
 
@@ -54,9 +58,13 @@ function even_odd_verify(x) {
 }
 
 function win_loss_calc(x, y, z) {
+    balance = balance - z;
     if (x == y) {
         console.log("WIN");
+        balance = balance + (z * 4);
+        return balance;
     } else {
         console.log("LOSS");
+        return balance;
     }
 }
