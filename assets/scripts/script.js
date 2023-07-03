@@ -1,27 +1,36 @@
 var balance = 200;
 
 const gameButton = document.getElementById("place_bet_roulette");
-gameButton.addEventListener("click", place_bet_roulette);
+gameButton.addEventListener("click", result = place_bet_roulette);
 
 function place_bet_roulette() {
-    var element = document.getElementById("mainbox");
-    element.classList.remove("spin_green");
-    element.classList.remove("spin_blue");
-    element.classList.remove("spin_orange");
-    element.classList.remove("spin_white");
+    var wheel = document.getElementById("mainbox");
+    wheel.removeAttribute("class");
 
     var place_bet_roulette = document.getElementById("bet_size").value;
     var current_number = generate_number();
     console.log(current_number);
     var result = win_loss_calc(even_odd_verify(current_number), selected_color(), place_bet_roulette);
     console.log(result);
-
+    setTimeout(update_balance(result), 7000);
 }
 
+function roll(x) {
+    x.disabled = true;
+    setTimeout(function () {
+        x.disabled = false;
+        var wheel = document.getElementById("mainbox");
+        wheel.removeAttribute("class");
+    }, 7000);
+}
+
+function update_balance(x) {
+    document.getElementById("my_balance").innerHTML = "Balance: £" + x;
+}
 
 function generate_number() {
     return Math.floor(Math.random() * 12);
-}
+};
 
 function selected_color() {
     if (document.getElementById('white_box_choice').checked) {
@@ -59,6 +68,7 @@ function even_odd_verify(x) {
 
 function win_loss_calc(x, y, z) {
     balance = balance - z;
+    update_balance(balance);
     if (x == y) {
         console.log("WIN");
         balance = balance + (z * 4);
