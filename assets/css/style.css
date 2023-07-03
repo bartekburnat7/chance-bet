@@ -1,9 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=Plus+Jakarta+Sans:wght@600&display=swap");
+
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     background-color: #202020;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 /*   NAV BAR   */
@@ -24,8 +27,10 @@ nav>div {
 
 nav a {
     text-decoration: none;
+    font-size: 2rem;
     color: white;
     background-color: transparent;
+    margin: 5px 20px 5px 20px;
 }
 
 #games {
@@ -40,6 +45,7 @@ nav a {
     border-radius: 30px;
     display: grid;
     grid-template-columns: 1fr;
+    height: 50%;
 }
 
 #mainbox {
@@ -190,8 +196,10 @@ nav a {
 
 #green_box {
     background-color: green;
+    color: white;
 }
 
 #blue_box {
     background-color: blue;
+    color: white;
 }
