@@ -7,12 +7,26 @@ function place_bet_roulette() {
     var wheel = document.getElementById("mainbox");
     wheel.removeAttribute("class");
 
-    var place_bet_roulette = document.getElementById("bet_size").value;
+    var place_bet = document.getElementById("bet_size").value;
+
+    if (place_bet < 1) {
+        gameButton.disabled = false;
+        return false;
+    } else if (place_bet > balance) {
+        gameButton.disabled = false;
+        return false;
+    } else if (selected_color() == false) {
+        gameButton.disabled = false;
+        return false;
+    }
+
     var current_number = generate_number();
+    var result = win_loss_calc(even_odd_verify(current_number), selected_color(), place_bet);
+
     console.log(current_number);
-    var result = win_loss_calc(even_odd_verify(current_number), selected_color(), place_bet_roulette);
     console.log(result);
-    setTimeout(update_balance(result), 7000);
+
+    setTimeout(update_balance(result), 7500);
 }
 
 function roll(x) {
