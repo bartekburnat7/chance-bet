@@ -12,7 +12,7 @@
     <nav>
         <div>
             <a id="logo_title" href="#hero_area">Chance.bet</a>
-            <a href="#">Balance: £200</a>
+            <a id="my_balance" href="#">Balance: £200</a>
         </div>
     </nav>
 
@@ -28,21 +28,43 @@
             <div id="arrow"></div>
         </div>
         <div id="bet_roulette">
-            <input id="bet_size" type="number">
-            <input name="colour" type="radio" class="choice" id="white_box_choice">
-            <label for="white_box_choice" id="white_box">WHITE</label>
-            <input name="colour" type="radio" class="choice" id="orange_box_choice">
-            <label for="orange_box_choice" id="orange_box">ORANGE</label>
-            <input name="colour" type="radio" class="choice" id="green_box_choice">
-            <label for="green_box_choice" id="green_box">GREEN</label>
-            <input name="colour" type="radio" class="choice" id="blue_box_choice">
-            <label for="blue_box_choice" id="blue_box">BLUE</label>
-            <button id="place_bet_roulette" id="blue_box">BET</button>
+            <input id="bet_size" type="number" min="1">
+            <div id="color_choice">
+                <input name="colour" type="radio" class="choice" id="white_box_choice">
+                <label for="white_box_choice" id="white_box">WHITE</label>
+                <input name="colour" type="radio" class="choice" id="orange_box_choice">
+                <label for="orange_box_choice" id="orange_box">ORANGE</label>
+                <input name="colour" type="radio" class="choice" id="green_box_choice">
+                <label for="green_box_choice" id="green_box">GREEN</label>
+                <input name="colour" type="radio" class="choice" id="blue_box_choice">
+                <label for="blue_box_choice" id="blue_box">BLUE</label>
+            </div>
+            <button id="place_bet_roulette" id="blue_box" onclick="roll(this);">BET</button>
         </div>
 
     </section>
-    <section id="about">
-
+    <section id="how_to_play">
+        <h1>How To Play</h1>
+        <div id="how_to_play_steps">
+            <div id="step_one">
+                <h2>Place a Bet</h2>
+                <p>Place a preffered bet in the first input field, make sure the amount is larger than £1 and less then
+                    or
+                    equal to your balance.</p>
+            </div>
+            <div id="step_two">
+                <h2>Choose Colour</h2>
+                <p>Make a choice of what colour you would like to place a bet on, you can only choose one colour per
+                    bet. If
+                    you guess the right colour you will be rewarded X4 your bet size.</p>
+            </div>
+            <div id="step_three">
+                <h2>Good Luck!!!</h2>
+                <p>Once you chose the bet size and your choice of colour, press the "BET" button and let the wheel do
+                    the
+                    work. Make sure to bet responsibly!</p>
+            </div>
+        </div>
     </section>
     <footer>
 
