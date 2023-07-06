@@ -150,28 +150,35 @@ nav a {
     margin: 20px 0 0 0;
     font-size: 2rem;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-#bet_roulette>label {
+#color_choice {
+    display: flex;
+    flex-grow: 1;
+}
+
+#color_choice>label {
     text-align: center;
-    width: 12%;
     padding: 5px;
+    margin: 5px;
     border-radius: 10px;
-    border: solid 5px #303030
+    border: solid 5px #303030;
+    flex-grow: 1;
 }
 
-#bet_roulette>input:focus+label {
+#color_choice>input:focus+label {
     border: solid 5px #b1b1b1
 }
 
 #bet_size {
-    width: 20%;
     font-size: 2rem;
-    border: none;
+    margin: 5px;
+    border: transparent;
     border-radius: 15px;
     border: solid 5px #303030;
     color: #cacaca;
+    flex-grow: 1;
 }
 
 .choice {
@@ -179,11 +186,12 @@ nav a {
 }
 
 #place_bet_roulette {
-    width: 20%;
     font-size: 2rem;
+    margin: 5px;
     border-radius: 15px;
     border: solid 5px #303030;
     color: #cacaca;
+    flex-grow: 1;
 }
 
 #white_box {
@@ -202,4 +210,24 @@ nav a {
 #blue_box {
     background-color: blue;
     color: white;
+}
+
+/*
+    HOW TO PLAY
+*/
+
+#how_to_play {
+    max-width: 1400px;
+    text-align: center;
+    margin: auto;
+}
+
+#how_to_play_steps {
+    display: flex;
+}
+
+#how_to_play_steps>div {
+    border: solid 2px #303030;
+    border-radius: 15px;
+    overflow: hidden;
 }
