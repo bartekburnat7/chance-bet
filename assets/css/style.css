@@ -33,6 +33,15 @@ nav a {
     margin: 5px 20px 5px 20px;
 }
 
+#main_title {
+    margin: auto;
+    max-width: 1400px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    padding: 25px;
+}
+
 #games {
     margin: auto;
     max-width: 1400px;
@@ -40,7 +49,6 @@ nav a {
 }
 
 #game_container {
-    margin-top: 30px;
     background-color: #404040;
     border-radius: 30px;
     display: grid;
@@ -230,4 +238,5 @@ nav a {
     border: solid 2px #303030;
     border-radius: 15px;
     overflow: hidden;
+    margin: 2.5px;
 }
