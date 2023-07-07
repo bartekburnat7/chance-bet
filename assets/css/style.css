@@ -54,6 +54,7 @@ nav a {
     display: grid;
     grid-template-columns: 1fr;
     height: 50%;
+    overflow: hidden;
 }
 
 #mainbox {
@@ -228,10 +229,18 @@ nav a {
     max-width: 1400px;
     text-align: center;
     margin: auto;
+    color: white;
+}
+
+#how_to_play h1 {
+    font-size: 2.5rem;
+    padding: 30px;
 }
 
 #how_to_play_steps {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
 }
 
 #how_to_play_steps>div {
@@ -239,4 +248,61 @@ nav a {
     border-radius: 15px;
     overflow: hidden;
     margin: 2.5px;
+    flex-grow: 1;
+}
+
+#how_to_play_step h2,
+p {
+    padding: 10px;
+}
+
+/*
+*   TABLET SIZE
+*/
+
+@media screen and (max-width: 1100px) {
+
+    /*
+    *   BET PLACING BUTTONS     *
+    */
+
+    #bet_size {
+        width: 100%;
+    }
+
+    #bet_roulette {
+        font-size: 1.6rem;
+    }
+
+    /*
+        HOW TO PLAY
+    */
+
+    #how_to_play_steps {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+s
+/*
+*   PHONE SIZE
+*/
+
+@media screen and (max-width: 500px) {
+
+    #mainbox {
+        width: 350px;
+        height: 350px;
+    }
+
+    /*
+    *   BET PLACING BUTTONS     *
+    */
+
+    #bet_roulette {
+        font-size: 100%;
+    }
+
+    #how_to_play_steps {
+        grid-template-columns: 1fr;
+    }
 }
