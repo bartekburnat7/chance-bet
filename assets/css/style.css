@@ -14,6 +14,8 @@ nav {
     width: 100%;
     background-color: #404040;
     z-index: 1000;
+    position: fixed;
+
 }
 
 nav>div {
@@ -22,7 +24,6 @@ nav>div {
     background-color: #404040;
     display: flex;
     justify-content: space-between;
-    line-height: 60px;
 }
 
 nav a {
@@ -31,6 +32,7 @@ nav a {
     color: white;
     background-color: transparent;
     margin: 5px 20px 5px 20px;
+    padding: 5px;
 }
 
 #main_title {
@@ -39,13 +41,12 @@ nav a {
     text-align: center;
     color: white;
     font-size: 3rem;
-    padding: 25px;
+    padding: 80px 0 50px 0;
 }
 
 #games {
     margin: auto;
     max-width: 1400px;
-
 }
 
 #game_container {
@@ -176,7 +177,7 @@ nav a {
     flex-grow: 1;
 }
 
-#color_choice>input:focus+label {
+#color_choice>input:checked+label {
     border: solid 5px #b1b1b1
 }
 
@@ -199,7 +200,7 @@ nav a {
     margin: 5px;
     border-radius: 15px;
     border: solid 5px #303030;
-    color: #cacaca;
+    color: #ffffff;
     flex-grow: 1;
 }
 
@@ -234,7 +235,7 @@ nav a {
 
 #how_to_play h1 {
     font-size: 2.5rem;
-    padding: 30px;
+    padding: 40px;
 }
 
 #how_to_play_steps {
@@ -244,23 +245,59 @@ nav a {
 }
 
 #how_to_play_steps>div {
-    border: solid 2px #303030;
+    border: solid 2px #444444;
     border-radius: 15px;
     overflow: hidden;
-    margin: 2.5px;
+    margin: 5px;
     flex-grow: 1;
 }
 
-#how_to_play_step h2,
+#how_to_play_steps>div>h2,
 p {
     padding: 10px;
 }
+
+#step_one_img {
+    height: 200px;
+    background: url(../images/step1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom: solid 2px #444444;
+}
+
+#step_two_img {
+    height: 200px;
+    background: url(../images/step2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    border-bottom: solid 2px #444444;
+}
+
+#step_three_img {
+    height: 200px;
+    background: url(../images/step3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-bottom: solid 2px #444444;
+}
+
 
 /*
 *   TABLET SIZE
 */
 
 @media screen and (max-width: 1100px) {
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    #place_bet_roulette {
+        font-size: 1.6rem;
+    }
 
     /*
     *   BET PLACING BUTTONS     *
@@ -282,16 +319,20 @@ p {
         grid-template-columns: 1fr 1fr;
     }
 }
-s
+
 /*
 *   PHONE SIZE
 */
 
 @media screen and (max-width: 500px) {
 
+    nav a {
+        font-size: 4vw;
+    }
+
     #mainbox {
-        width: 350px;
-        height: 350px;
+        width: 85vw;
+        height: 85vw;
     }
 
     /*
