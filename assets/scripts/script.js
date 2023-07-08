@@ -1,6 +1,6 @@
 var balance = 200;
 
-const gameButton = document.getElementById("place_bet_roulette");
+var gameButton = document.getElementById("place_bet_roulette");
 gameButton.addEventListener("click", result = place_bet_roulette);
 
 function place_bet_roulette() {
@@ -44,7 +44,7 @@ function update_balance(x) {
 
 function generate_number() {
     return Math.floor(Math.random() * 12);
-};
+}
 
 function selected_color() {
     if (document.getElementById('white_box_choice').checked) {
@@ -61,20 +61,17 @@ function selected_color() {
 }
 
 function even_odd_verify(x) {
+    var element = document.getElementById("mainbox");
     if (x >= 0 && x < 4) {
-        var element = document.getElementById("mainbox");
         element.classList.add("spin_green");
         return 1;
     } else if (x >= 4 && x < 7) {
-        var element = document.getElementById("mainbox");
         element.classList.add("spin_blue");
         return 2;
     } else if (x >= 7 && x < 10) {
-        var element = document.getElementById("mainbox");
         element.classList.add("spin_orange");
         return 3;
     } else if (x >= 10) {
-        var element = document.getElementById("mainbox");
         element.classList.add("spin_white");
         return 4;
     }
