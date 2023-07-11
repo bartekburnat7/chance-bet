@@ -33,6 +33,7 @@ Chance.bet is a website where the user can try his luck by plating the game of "
   - In this section the game is explained in a simple to follow grid layout. It shows the user in 3 steps how to play the game
   - Each box has a paragraph that describes what to do in every step in order and what the outcomes will be if you correctly guess the colour.
   - I also warned users that betting can be dangerous, so that they do not try to use real life betting websites and create a bad habit or addiction.
+    ![How to Play](/assets/images/howtoplayss.png)
 
 # **Testing**
 
